@@ -132,8 +132,96 @@ function convertToRomanNumerals(/* num */) {
  *  '10,5'    => 'one zero point five'
  *  '1950.2'  => 'one nine five zero point two'
  */
-function convertNumberToString(/* numberStr */) {
-  throw new Error('Not implemented');
+function convertNumberToString(numberStr) {
+  let newArr = '';
+  for (let i = 0; i < numberStr.length; i += 1) {
+    if (i === numberStr.length - 1) {
+      switch (numberStr[i]) {
+        case '1':
+          newArr += 'one';
+          break;
+        case '2':
+          newArr += 'two';
+          break;
+        case '3':
+          newArr += 'three';
+          break;
+        case '4':
+          newArr += 'four';
+          break;
+        case '5':
+          newArr += 'five';
+          break;
+        case '6':
+          newArr += 'six';
+          break;
+        case '7':
+          newArr += 'seven';
+          break;
+        case '8':
+          newArr += 'eight';
+          break;
+        case '9':
+          newArr += 'nine';
+          break;
+        case '0':
+          newArr += 'zero';
+          break;
+        case '.':
+        case ',':
+          newArr += 'point';
+          break;
+        case '-':
+          newArr += 'minus';
+          break;
+        default:
+          newArr = '';
+      }
+    } else {
+      switch (numberStr[i]) {
+        case '1':
+          newArr += 'one ';
+          break;
+        case '2':
+          newArr += 'two ';
+          break;
+        case '3':
+          newArr += 'three ';
+          break;
+        case '4':
+          newArr += 'four ';
+          break;
+        case '5':
+          newArr += 'five ';
+          break;
+        case '6':
+          newArr += 'six ';
+          break;
+        case '7':
+          newArr += 'seven ';
+          break;
+        case '8':
+          newArr += 'eight ';
+          break;
+        case '9':
+          newArr += 'nine ';
+          break;
+        case '0':
+          newArr += 'zero ';
+          break;
+        case '.':
+        case ',':
+          newArr += 'point ';
+          break;
+        case '-':
+          newArr += 'minus ';
+          break;
+        default:
+          newArr = '';
+      }
+    }
+  }
+  return newArr;
 }
 
 /**
